@@ -9,9 +9,6 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-  let db = fs.readFileSync(path.join(__dirname, '..//db/db.json'));
-  db = JSON.parse(data);
-  res.json(db);
   
   const newNote = {
     title : req.body.title,
